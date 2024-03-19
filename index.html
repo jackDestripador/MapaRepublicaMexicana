@@ -1,20 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo de nueva página para GOB.mx</title>
+
+    <!-- CSS -->
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+
+    <!-- Respond.js soporte de media queries para Internet Explorer 8 -->
+    <!-- ie8.js EventTarget para cada nodo en Internet Explorer 8 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/0.2.2/ie8.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Contenido -->
+    <main class="page">
+        <div class="container">
+            <br>
+            <!-- Contenedor para el mapa de Highcharts -->
+            <div id="container" style="width: 100%; height: 720px;"></div>
+
+            <!-- Agrega la estructura de la ventana modal dentro del contenedor -->
+            <div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="estadoModalLabel">Información del Estado</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Contenido de la ventana modal aquí.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de la estructura de la ventana modal -->
+        </div>
+    </main>
+
+    <!-- JS -->
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+
+    <!-- Agrega los scripts de Highcharts -->
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-    <script src="/home/mapa/index.js"></script>
-    <script src="/home/mapa/style.css"></script>
-    <div id="container"></div>
-    
+    <!-- script para quitar contornos de letras quer dan errores con traductores de navegadores -->
+    <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
 
-    <title>Document</title>
-</head>
-<body>
-    
+    <!-- script para consumir HiChart de consumoapp.js -->
+    <script src="consumoapp.js"></script>
+
 </body>
+
 </html>
-
-
